@@ -1,0 +1,68 @@
+.card-hotel {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $light-blue;
+    border-radius: 3px;
+    padding: 15px;
+    transition: all ease-in-out .2s;
+    margin-bottom: 10px;
+    @include desktop {
+        padding-top: 20px;
+        margin-bottom: 0;
+        flex: 0 1 19.5%;
+    }
+    @include tablet {
+
+    }
+    &--active {
+        border-color: $medium-blue;
+    }
+    &__title {
+        font-family: $roboto;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 120%;
+        color: lighten($dark-blue, 10%);
+        @include desktop {
+            padding-top: 20px;
+        }
+    }
+    &__line {
+        width: 30%;
+        border: 1px solid lighten($light-blue, 50%);
+    }
+    &__list {
+        &__item {
+            display: flex;
+            font-family: $roboto;
+            font-size: 1.5rem;
+            color: $dark-blue;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+        &__item:before {
+            content: "\2022";
+            display: inline-block;
+            width: 10px;
+            color: lighten($grey, 50%);
+            font-size: 2.5rem;
+            margin-right: 8px;
+        }
+    }
+    &__radio-button {
+        padding: 15px;
+        background-color: lighten($grey, 65%);
+        margin-top: 10px;
+        @include desktop {
+            margin-top: 20px;
+        }
+        &--active {
+            outline: 1px solid $medium-blue;
+        }
+    }
+}
