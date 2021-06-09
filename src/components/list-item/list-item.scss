@@ -1,0 +1,92 @@
+.list-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lighten($grey, 50%);
+    padding: 15px 0 15px 15px;
+    margin-bottom: 20px;
+    @include tablet {
+        flex-direction: row;
+        padding: 15px 0;
+    }
+    @include desktop {
+        flex-direction: row;
+        padding: 15px 0;
+    }
+    &__img-content {
+        display: flex;
+        flex: 1 0 5%;
+        justify-content: center;
+        @include tablet {
+            flex: 0 0 30%;
+        }
+        @include desktop {
+            flex: 0 0 15%;
+        }
+        &__img {
+            width: auto;
+            height: 100%;
+            max-height: 200px;
+        }
+    }
+    
+    &__text {
+        display: flex;
+        flex: 1;
+        // flex-direction: column;
+        justify-content: space-between;
+        line-height: 120%;
+        margin-top: 10px;
+        @include desktop {
+            margin-top: 0;
+        }
+        &__main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 1 80%;
+            &__title {
+                font-family: $roboto-slab;
+                color: $medium-blue;
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            &__desc {
+                font-family: $roboto;
+                font-size: 1.4rem;
+                color: lighten($grey, 30%);
+            }
+            &__more {
+                font-family: $roboto-slab;
+                font-weight: 700;
+                font-size: 1.5rem;
+                color: $light-blue;
+                padding-top: 20px;
+            }
+        }
+    }
+    &__abv {
+        font-family: $roboto-slab;
+        font-weight: 700;
+        font-size: 1.6rem;
+        margin-left: 20px;
+        &__type {
+            padding: 10px;
+            @include desktop {
+                padding: 10px 50px 10px 10px;
+            }
+            &--red {
+                background-color: $red;
+                color: $white;
+            }
+            &--orange {
+                background-color: $orange;
+                color: $medium-blue;
+            }
+            &--yellow {
+                background-color: $yellow;
+                color: $medium-blue;
+            }
+        }
+    }
+}
