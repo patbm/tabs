@@ -1,0 +1,32 @@
+.tab1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    &__title {
+        font-family: $roboto-slab;
+        font-size: 2rem;
+        color: $medium-blue;
+        text-align: center;
+        margin: 0 0 30px;
+        @include desktop{
+            font-size: 3rem;
+            margin: 20px 0 50px;
+        }
+        &__caps {
+            text-transform: uppercase;
+        }
+        &__bold {
+            font-weight: 700;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

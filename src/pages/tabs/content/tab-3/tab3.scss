@@ -1,0 +1,12 @@
+.tab3 {
+    &__title {
+        font-family: $roboto-slab;
+        font-size: 2rem;
+        color: $light-blue;
+        margin: 0 0 30px;
+        @include desktop{
+            font-size: 3rem;
+            margin: 20px 0 50px;
+        }
+    }
+}
