@@ -1,0 +1,19 @@
+.tab-nav {
+    font-family: $roboto-slab;
+    color: $light-blue;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    
+    &--active {
+        border-bottom: 3px solid $medium-blue;
+        color: $medium-blue;
+    }
+
+    &:not(.tab-nav--active) {
+        cursor: pointer;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
