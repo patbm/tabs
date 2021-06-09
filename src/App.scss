@@ -1,0 +1,15 @@
+// @import './settings/styles/*.scss';
+@import './settings/styles/colors';
+@import './settings/styles/mixins';
+@import './settings/styles/fonts';
+@import './settings/styles/reset';
+
+@import './components/card-hotel/card-hotel';
+@import './components/card-hotel/radio-button/radio-button';
+@import './components/list-item/list-item';
+@import './components/tabs/tabs';
+@import './components/tabs/tab-nav/tab-nav';
+
+@import './pages/main';
+@import './pages/tabs/content/tab-1/tab1';
+@import './pages/tabs/content/tab-3/tab3';
