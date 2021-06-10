@@ -5,9 +5,9 @@ const getAbvStyle = (abv) => {
     let style = '';
     if (abv <= 5.0) {
         style = 'yellow'; 
-    } else if (abv >= 5.1 || abv === 10.0) {
+    } if (abv >= 5.1 || abv === 10.0) {
         style = 'orange';
-    } else if (abv > 10.0) {
+    } if (abv > 10.0) {
         style = 'red';
     }
     return style;
