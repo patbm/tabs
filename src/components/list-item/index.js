@@ -10,13 +10,12 @@ const getAbvStyle = (abv) => {
     } else if (abv > 10.0) {
         style = 'red';
     }
-    console.log(style);
     return style;
 }
 
 const ListItem = ({ data }) => {
     return (
-        <>
+        <ul>
             {data.map((dataItem) => (
                 <li key={dataItem.id} className="list-item">
                     
@@ -43,8 +42,12 @@ const ListItem = ({ data }) => {
                     </div>
                 </li>
             ))}
-        </>
+        </ul>
     )
+}
+
+ListItem.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.shape()).isRequired,
 }
 
 export default ListItem;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 import RadioButton from './radio-button';
 
@@ -13,8 +13,8 @@ const CardHotel = ({ data, value, setValue, index }) => {
                             <h2 className="card-hotel__title">{data.title}</h2>
                             <hr className="card-hotel__line"/>
                             <ul className="card-hotel__list">
-                                {data.options.map((opt) => (
-                                    <li className="card-hotel__list__item">
+                                {data.options.map((opt, index) => (
+                                    <li key={index} className="card-hotel__list__item">
                                         <p>{opt}</p>
                                     </li>
                                 ))}
@@ -33,12 +33,10 @@ const CardHotel = ({ data, value, setValue, index }) => {
 }
 
 CardHotel.propTypes = {
-    // data: PropTypes.shape().isRequired(),
-    // active: PropTypes.bool.isRequired(),
-    // handleOnClick: PropTypes.func.isRequired,
-}
-
-CardHotel.defaultProps = {
+    data: PropTypes.shape().isRequired,
+    value: PropTypes.string.isRequired,
+    setValue: PropTypes.func.isRequired,
+    index: PropTypes.number.isRequired,
 }
 
 export default CardHotel;

@@ -23,9 +23,6 @@ Tab3Content.propTypes = {
     getDrinksAction: PropTypes.func.isRequired,
 }
 
-Tab3Content.defaultProps = {
-}
-
 const mapToStateToProps = (state) => ({
     drinks: getAllDrinks(state),
 });

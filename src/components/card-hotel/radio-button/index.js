@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
 const RadioButon = ({ value, setValue, id, label, ...rest }) => {
@@ -10,19 +10,17 @@ const RadioButon = ({ value, setValue, id, label, ...rest }) => {
                     id={id}
                     onChange={(event) => setValue(event.target.value)}
                     {...rest}/>
-                <label className="radio-button__label" for={id}>{label}</label>
+                <label className="radio-button__label" htmlFor={id}>{label}</label>
             </div>
                     
     )
 }
 
 RadioButon.propTypes = {
-    // data: PropTypes.shape().isRequired(),
-    // active: PropTypes.bool.isRequired(),
-    // handleOnClick: PropTypes.func.isRequired,
-}
-
-RadioButon.defaultProps = {
+    value: PropTypes.string.isRequired,
+    setValue: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
 }
 
 export default RadioButon;
